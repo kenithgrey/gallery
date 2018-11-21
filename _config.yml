@@ -8,6 +8,40 @@ sass:
 
 widgets:
  -
+    name: xmrr
+    thumbnail: images/xmr_chart.png
+    url: https://github.com/Zanidean/xmrr
+    jslibs: >
+    ghuser: Zanidean  
+    ghrepo: xmrr
+    tags: XmR, Visualization, Control Charts, QC, XBar
+    cran: True
+    release: 
+    examples: https://sramhc.shinyapps.io/xmrbuilder/
+    ghauthor: Alex Zanidean 
+    short: >
+      Generate XMR Control Chart Data from Time-Series Data.
+    description: >
+      Use xmr() for XmR data which re-calculates to signal true change, and use xmr_chart() for XmR style control charts with recalculated process limits.
+      
+ -
+    name: gg3D
+    thumbnail: images/gg3D.png
+    url: https://github.com/AckerDWM/gg3D
+    jslibs: >
+    ghuser: AckerDWM
+    ghrepo: gg3D
+    tags: 3D, Visualization
+    cran: false
+    release: 
+    examples: http://htmlpreview.github.io/?https://github.com/AckerDWM/gg3D/blob/master/gg3D-vignette.html
+    ghauthor: Daniel Acker
+    short: >
+      3D perspective plots for ggplot2
+    description: >
+      gg3D adds 3D axes, 3D perspective projections with arbitrary rotations, and 3D wireframe plots to ggplot.
+
+ -
     name: ggQC
     thumbnail: images/ggQC.png
     url: https://github.com/kenithgrey/ggQC
@@ -93,14 +127,14 @@ widgets:
  -
     name: ggmuller
     thumbnail: images/ggmuller.png
-    url: https://github.com/robjohnnoble/ggmuller
+    url: https://cran.r-project.org/web/packages/ggmuller/index.html
     jslibs: >
     ghuser: robjohnnoble
     ghrepo: ggmuller
     tags: visualization,evolution,dynamics
-    cran: false
+    cran: true
     release:
-    examples: https://thesefewlines.wordpress.com/2016/08/20/how-to-ggmuller/
+    examples: https://cran.r-project.org/web/packages/ggmuller/vignettes/ggmuller.html
     ghauthor: robjohnnoble
     short: >
       Creates Muller plots for visualizing evolutionary dynamics.
@@ -134,7 +168,7 @@ widgets:
     tags: visualization,general
     cran: true
     release:
-    examples:
+    examples: https://cran.r-project.org/web/packages/ggrepel/vignettes/ggrepel.html
     ghauthor: slowkow
     short: >
       Repel overlapping text labels away from each other.
@@ -159,18 +193,31 @@ widgets:
  -
     name: ggpmisc
     thumbnail: images/ggpmisc.png
-    url: https://bitbucket.org/aphalo/ggpmisc
+    url: https://docs.r4photobiology.info/ggpmisc
     jslibs: >
     ghuser:
     ghrepo:
-    tags: visualization,general
+    tags: visualization,general,model fit,anova,table
     cran: true
     release:
-    examples:
-    ghauthor:
+    examples: https://docs.r4photobiology.info/ggpmisc/articles
+    ghauthor: aphalo
     short: >
-      Miscellaneous Extensions to ‘ggplot2’.
+      Annotate plots with fitted model equations, ANOVA table, summary table; 
+      find and label peaks and valleys, compute quadrant counts; filter 
+      observations by local density.
     description: >
+      Package ‘ggpmisc’ (Miscellaneous Extensions to ‘ggplot2’) is a set of 
+      extensions to R package ‘ggplot2’ (>= 3.0.0) with emphasis on annotations 
+      and highlighting related to fitted models and data summaries. To 
+      complement these, the widely useful `geom_table()` and `stat_fmt_tb()` are 
+      defined as well as ggplot constructors for time series objects. The 
+      provided `ggplot.ts()` and `ggplot.xts()` use `try_tibble()` which is also 
+      exported and accepts objects of additional classes as input. Statistics 
+      useful for highlighting and/or annotating individual data points in 
+      regions of plot panels with high/low densities of observations. These 
+      stats are designed to work well together with `geom_text_repel()` and 
+      `geom_label_repel()` from package ‘ggrepel’.
 
  -
     name: geomnet
@@ -225,6 +272,26 @@ widgets:
       using 'ggplot2'.
 
  -
+    name: autoplotly
+    thumbnail: images/ggfortify.png
+    url: https://github.com/terrytangyuan/autoplotly
+    jslibs: plotly
+    ghuser: terrytangyuan
+    ghrepo: autoplotly
+    tags: visualization,general
+    cran: true
+    release:
+    examples: https://terrytangyuan.github.io/2018/02/12/autoplotly-intro/
+    ghauthor: terrytangyuan
+    short: >
+      Automatic generation of interactive visualizations for popular statistical results.
+    description: >
+      Automatically generate interactive visualizations for popular statistical results 
+      supported by 'ggfortify', such as time series, PCA, clustering and survival analysis,
+      with 'plotly.js' <https://plot.ly/>  and 'ggplot2' style. The generated visualizations
+      can also be easily extended using 'ggplot2' and 'plotly' syntax while staying interactive.
+
+ -
     name: gganimate
     thumbnail: images/gganimate.gif
     url: https://github.com/dgrtwo/gganimate
@@ -275,19 +342,60 @@ widgets:
  -
     name: ggspectra
     thumbnail: images/ggspectra.png
-    url: https://bitbucket.org/aphalo/ggspectra
+    url: https://docs.r4photobiology.info/ggspectra
     jslibs: >
     ghuser:
     ghrepo:
     tags: visualization,general
     cran: true
     release:
-    examples:
-    ghauthor:
+    examples: https://docs.r4photobiology.info/ggspectra/articles
+    ghauthor: aphalo
     short: >
-      ggspectra extends ggplot2 with stats, geoms and annotations suitable for light spectra.
+      'ggspectra' extends 'ggplot2' with stats, geoms and annotations for 
+      plotting light spectra.
     description: >
+      The goal of ‘ggspectra’ is to make it easy to plot radiation spectra and 
+      similar data, such and transmittance, absorbance and reflectance spectra, 
+      producing fully annotated publication- and presentation-ready plots.
+      Package ‘ggspectra’ provides stats, geoms, scales and functions to be 
+      used for plotting radiation-related spectra and annotating the plots with 
+      quantities derived from spectral data. All summary quantities implemented
+      in ‘photobiology’ can be used for annotations including biologically 
+      effective irradiances and exposures.
 
+-
+    name: ggstatsplot
+    thumbnail: images/ggstatsplot.png
+    url: https://github.com/IndrajeetPatil/ggstatsplot
+    jslibs: >
+    ghuser: IndrajeetPatil
+    ghrepo: ggstatsplot
+    tags: visualization,statistics
+    cran: false
+    release:
+    examples:
+    ghauthor: IndrajeetPatil
+    short: >
+      ggstatsplot provides a collection of functions to enhance ggplot2 plots with results from statistical tests.
+    description: >
+        
+ -
+    name: ggstatsplot
+    thumbnail: images/ggstatsplot.png
+    url: https://github.com/IndrajeetPatil/ggstatsplot
+    jslibs: >
+    ghuser: IndrajeetPatil
+    ghrepo: ggstatsplot
+    tags: visualization,statistics
+    cran: false
+    release:
+    examples:
+    ghauthor: IndrajeetPatil
+    short: >
+      The ggstatsplot provides a way to build 'ggplot2' plot with statistical details.
+    description: >
+        
  -
     name: ggnetwork
     thumbnail: images/ggnetwork.png
@@ -402,7 +510,7 @@ widgets:
     
     
  -
-    name: ggmosiac
+    name: ggmosaic
     thumbnail: images/ggmosaic.png
     url: https://github.com/haleyjeppson/ggmosaic
     jslibs: >
@@ -416,8 +524,7 @@ widgets:
     short: >
       ggmosaic implements mosaic plots in ‘ggplot2’ via geom_mosaic.
     description: >
-    
-    
+ 
  -
     name: survminer
     thumbnail: images/survminer.png
@@ -453,21 +560,21 @@ widgets:
       Themes for ggplot. The idea of this package is that you can just set the theme and then forget about it. You should not have to change any of your existing code.
 
  -
-    name: ggally
+    name: GGally
     thumbnail: images/ggally.png
-    url: http://ggobi.github.io/ggally/docs.html
+    url: https://ggobi.github.io/ggally/
     jslib: >
     ghuser: ggobi
     ghrepo: ggally
     tags: visualization,general
     cran: true
     release:
-    examples: http://ggobi.github.io/ggally/docs.html
+    examples: https://ggobi.github.io/ggally/
     ghauthor: ggobi
     short: >
        ggally extends 'ggplot2' by adding several functions to reduce the complexity of combining geometric objects with transformed data.
     description: >
-       The R package '\{}href{http://docs.ggplot2.org/current/}{ggplot2}' is a plotting system based on the grammar of graphics. '\{}href{https://ggobi.github.io/ggally}{GGally}' extends 'ggplot2' by adding several functions to reduce the complexity of combining geometric objects with transformed data. Some of these functions include a pairwise plot matrix, a two group pairwise plot matrix, a parallel coordinates plot, a survival plot, and several functions to plot networks. 
+       ggplot2 is a plotting system based on the grammar of graphics. 'GGally' extends 'ggplot2' by adding several functions to reduce the complexity of combining geometric objects with transformed data. Some of these functions include a pairwise plot matrix, a two group pairwise plot matrix, a parallel coordinates plot, a survival plot, and several functions to plot networks. 
 
  -
     name: ggseqlogo
@@ -484,5 +591,169 @@ widgets:
     short: >
        Publication-ready sequence logos using ggplot2.
     description: >
-       '\{}href{https://github.com/omarwagih/ggseqlogo}{ggseqlogo}' extends 'ggplot2' allowing users to flexibily plot sequence logos.
+       ggseqlogo extends 'ggplot2' allowing users to flexibily plot sequence logos.
 
+ -
+    name: ggChernoff
+    thumbnail: images/ggChernoff.png
+    url: https://github.com/Selbosh/ggChernoff
+    jslib: >
+    ghuser: Selbosh
+    ghrepo: ggChernoff
+    tags: visualization
+    cran: false
+    examples: https://github.com/Selbosh/ggChernoff
+    ghauthor: Selbosh
+    short: >
+       Visualise multivariate data using human faces
+    description: >
+       Adds geoms, scales and aesthetics to plot 'Chernoff' faces that vary their expression according to your data.
+       Make your data smile or frown, angry or straight-faced, with continuous scales and legend support.
+        
+ -
+    name: ggridges
+    thumbnail: images/ggridges.png
+    url: https://cran.r-project.org/web/packages/ggridges/vignettes/introduction.html
+    jslibs: >
+    ghuser: clauswilke
+    ghrepo: ggridges
+    tags: visualization,general
+    cran: true
+    release:
+    examples: https://cran.r-project.org/web/packages/ggridges/vignettes/gallery.html
+    ghauthor: clauswilke
+    short: >
+      Ridgeline plot geoms for 'ggplot2'
+    description: >
+      Ridgeline plots provide a convenient way of visualizing changes in distributions over time or space. This package enables the creation of such plots in 'ggplot2'.
+
+ -
+    name: lemons
+    thumbnail: images/lemon.png
+    url: https://github.com/stefanedwards/lemon
+    jslibs: >
+    ghuser: stefanedwards
+    ghrepo: lemon
+    tags: visualization,brackets,axis
+    cran: true
+    release:
+    examples: https://cran.r-project.org/web/packages/lemon/vignettes/capped-axes.html
+    ghauthor: stenfanedwards
+    short: >
+      Repositioning legends and adding brackets to axes to 'ggplot2'.
+    description: >
+      Functions for working with legends and axis lines of 'ggplot2', facets that repeat axis lines on all panels, and some 'knitr' extensions.
+
+ -
+    name: cowplot
+    thumbnail: images/cowplot.png
+    url: https://cran.r-project.org/web/packages/cowplot/vignettes/introduction.html
+    jslibs: >
+    ghuser: wilkelab
+    ghrepo: cowplot
+    tags: visualization,general
+    cran: true
+    release:
+    examples: https://cran.r-project.org/web/packages/cowplot/vignettes/introduction.html
+    ghauthor: clauswilke
+    short: >
+      Streamlined plot theme and plot annotations for 'ggplot2'
+    description: >
+      The package provides a streamlined and clean theme that is used in the Wilke lab, hence the package name, which stands for Claus O. Wilke's plot package. The package also provide functionality to combine multiple 'ggplot2' plots into one, align them, and label them with letters, e.g. A, B, C, etc., as is often required for scientific publications.
+      
+ -
+    name: qqplotr
+    thumbnail: images/qqplotr.png
+    url: https://github.com/aloy/qqplotr
+    jslibs: >
+    ghuser: aloy
+    ghrepo: qqplotr
+    tags: quantile-quantile,probability-probability
+    cran: true
+    release:
+    examples: https://github.com/aloy/qqplotr
+    ghauthor: almeidaxan
+    short: >
+      Quantile-quantile and probability-probability plot extensions for 'ggplot2'
+    description: >
+      The package extends some 'ggplot2' functionalities by permitting the drawing of quantile-quantile (Q-Q) and probability-probability (P-P) points, lines, and confidence bands. The functions of this package also allow the detrend adjustment, previously proposed in the literature to help reduce visual bias when assessing those type of plots.
+      
+ -
+    name: ggalluvial
+    thumbnail: images/ggalluvial.png
+    url: https://github.com/corybrunson/ggalluvial
+    jslibs: >
+    ghuser: corybrunson
+    ghrepo: ggalluvial
+    tags: visualization,categorical,time series
+    cran: true
+    examples: 
+    ghauthor: corybrunson
+    short: >
+      A 'ggplot2' extension for alluvial diagrams.
+    description: >
+      Alluvial diagrams encompass a variety of charts that use x-splines (alluvia and flows), sometimes augmented with stacked bars (lodes or strata), to visualize incidence structures derived from several data types, including repeated categorical measures, evolving classifications, and multi-dimensional categorical data. This package contains stats and geoms that interpret multiple data formats compatible with this framework while hewing to the principles of tidy data and the grammar of graphics.
+      
+ -
+    name: patchwork
+    thumbnail: images/thomasp85-patchwork.png
+    url: https://github.com/thomasp85/patchwork#patchwork
+    jslibs: >
+    ghuser: thomasp85
+    ghrepo: patchwork
+    tags: visualization,composition
+    cran: false
+    examples: 
+    ghauthor: thomasp85
+    short: >
+      Easy composition of ggplot plots using arithmetic operators
+    description: >
+      ggplot2 is concerned with single plots, facets notwithstanding, and does not provide a native way to compose multiple plots. patchwork extends the standard ggplot2 API to allow composition with the '+' operator as well as other the means to customize the layout and nest sub-arrangements.
+      
+ -
+    name: ggquiver
+    thumbnail: images/ggquiver.png
+    url: https://github.com/mitchelloharawild/ggquiver
+    jslibs: >
+    ghuser: mitchelloharawild
+    ghrepo: ggquiver
+    tags: visualization,quiver,velocity,vector
+    cran: true
+    examples: 
+    ghauthor: mitchelloharawild
+    short: >
+      Quiver/velocity plots for 'ggplot2'.
+    description: >
+      Quiver plots are common a common visualisation method for vector fields. 'ggquiver' provides a new geom which simplifies the creation of these plots, with scaling and centering functionality.
+
+ -
+    name: ggdag
+    thumbnail: images/ggdag.png
+    url: https://ggdag.netlify.com/
+    jslibs: >
+    ghuser: malcolmbarrett
+    ghrepo: ggdag
+    tags: visualization,dags,inference
+    cran: true
+    examples: https://ggdag.netlify.com/articles/intro-to-ggdag.html
+    ghauthor: malcolmbarrett
+    short: >
+      Causal directed acyclic graphs (DAGs) in `ggplot2`
+    description: >
+      Structural causal models are an important part of the causal inference toolkit and are often portrated as directed acyclic graphics (DAGs). `ggdag` extends the `dagitty` package for analyzing causal DAGs to make them tidy and plot them using `ggplot2` and `ggraph`.
+
+ -
+    name: ggformula
+    thumbnail: images/projectmosaic-ggformula.png
+    url: https://projectmosaic.github.io/ggformula/
+    jslibs: >
+    ghuser: ProjectMOSAIC
+    ghrepo: ggformula
+    tags: visualization,general,interface
+    cran: true
+    examples: https://projectmosaic.github.io/ggformula/articles/ggformula.html
+    ghauthor: rpruim
+    short: >
+      `ggplot2` via formulas and pipes
+    description: >
+      `ggformula` provides a formula-based interface for `ggplot2` that uses pipes (`%>%`) for layering.
